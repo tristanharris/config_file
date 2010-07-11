@@ -1,0 +1,17 @@
+[user]
+	name = Tristan Harris
+	email = tris.dev@pumpcottage.me.uk
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+        todo = branch -a --no-merged
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[apply]
+	whitespace = nowarn

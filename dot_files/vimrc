@@ -1,0 +1,18 @@
+set term=linux
+set nocompatible " vim not vi mode
+syntax on " Turn on syntax highlighting
+set guioptions-=T " Turn off gui toolbar
+set wildmode=longest,list " Set compleation mode
+au GUIEnter * set lines=35 columns=128 " Set window size for gui
+au GUIEnter * :NERDTree " Automatically show nerdtree on gui start
+set hidden " keep files open when switching buffers
+set autoindent " Auto indenting
+set expandtab " Conver tabs to spaces
+set shiftwidth=2 " Number of sapce to auto indent
+set smarttab
+filetype on
+set list listchars=tab:»·,trail:· " show tabs and trailing whitespace
+set scrolloff=3 " Keep the cursor 3 lines away from the edge
+set ruler " Show cursor position in status bar
+set showmatch " Highlight matching brackets
+
