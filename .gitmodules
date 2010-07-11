@@ -1,0 +1,23 @@
+[submodule "dot_files/vim/bundle/vim-rails"]
+	path = dot_files/vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+
+[submodule "dot_files/vim/bundle/vim-nerdtree"]
+	path = dot_files/vim/bundle/vim-nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+
+[submodule "dot_files/vim/bundle/ack.vim"]
+	path = dot_files/vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "dot_files/vim/bundle/nerdtree"]
+	path = dot_files/vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "dot_files/vim/bundle/vim-cucumber"]
+	path = dot_files/vim/bundle/vim-cucumber
+	url = git://github.com/tpope/vim-cucumber.git
+[submodule "dot_files/vim/bundle/vim-haml"]
+	path = dot_files/vim/bundle/vim-haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "dot_files/vim/bundle/vim-ruby"]
+	path = dot_files/vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
