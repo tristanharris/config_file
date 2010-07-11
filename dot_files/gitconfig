@@ -2,6 +2,9 @@
 	name = Tristan Harris
 	email = tris.dev@pumpcottage.me.uk
 
+[core]
+	excludesfile = ~/.git_global_ignore
+
 [alias]
 	st = status
 	ci = commit
