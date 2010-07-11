@@ -1,4 +1,7 @@
-source ~/.bash_login
+source ~/.bash_files/paths
+
 # rvm-install added line:
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+source ~/.bash_files/aliases
 

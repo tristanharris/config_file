@@ -1,0 +1,21 @@
+alias ls='ls -FG'
+alias ll='ls -lh'
+alias less='less -R'
+
+alias cap1='cap _1.4.2_'
+
+alias rs='echo Specs && rake -s spec'
+alias rsa='ruby stories/all.rb'
+alias rsc='rake -s spec:controllers'
+alias rsm='rake -s spec:models'
+alias rsr='ruby stories/runner.rb'
+alias rsv='rake -s spec:views'
+alias rf='echo Features && rake -s features CUCUMBER_OPTS="-f progress"'
+alias rsf='rs && echo -e "\n----------\n" && rf'
+
+alias ql='qlmanage -p  > /dev/null 2>&1 '
+
+alias gk='gitk --all >/dev/null &'
+alias gx='gitx --all'
+
+
