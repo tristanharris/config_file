@@ -9,8 +9,15 @@
 	st = status
 	ci = commit
 	co = checkout
-        todo = branch -a --no-merged
+	todo = branch -a --no-merged
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	last = log --pretty=oneline --abbrev-commit --decorate -n1
+	d = diff
+	ds = diff --staged
+	dw = diff --color-words
+	dsw = diff --color-words --staged
+	ff = merge --ff-only
+	up = pull --ff-only
 
 [color]
 	diff = auto

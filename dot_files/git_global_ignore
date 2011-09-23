@@ -1,2 +1,5 @@
 .*.sw?
+*~
+CVS/*
+.gitk-tmp*
 
