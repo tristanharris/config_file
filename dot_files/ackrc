@@ -1,2 +1,6 @@
 --type-add
-ruby=.feature
+ruby=.feature,.haml
+--type-set
+sass=.sass
+--type-add
+php=.inc
