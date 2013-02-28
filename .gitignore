@@ -1,1 +1,4 @@
-dot_files/vim/tmp/*
+/dot_files/vim/tmp/*
+/dot_files/vim/doc/*
+/dot_files/vim/.netrwhist
+/dot_files/vim/.VimballRecord
