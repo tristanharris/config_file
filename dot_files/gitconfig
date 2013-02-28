@@ -4,6 +4,7 @@
 
 [core]
 	excludesfile = ~/.git_global_ignore
+	pager = less -x2
 
 [alias]
 	st = status
@@ -18,10 +19,14 @@
 	dsw = diff --color-words --staged
 	ff = merge --ff-only
 	up = pull --ff-only
+	#git remote add bak server:/path/to/backup/repo
+	bak = push --mirror bak
 
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [apply]
-	whitespace = nowarn
+	whitespace = warn
+[diff]
+	renames = true
