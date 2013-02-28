@@ -3,3 +3,4 @@
 CVS/*
 .gitk-tmp*
 /tags
+/doc/tags
