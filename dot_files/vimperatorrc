@@ -1,5 +1,4 @@
 set wildmode=list:full
-set wildoptions=auto
 set complete=ls
 set titlestring=Firefox
 
