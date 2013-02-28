@@ -1,4 +1,4 @@
-alias ls='ls -FG'
+alias ls='ls -F --color'
 alias ll='ls -lh'
 alias less='less -R'
 
@@ -19,3 +19,4 @@ alias gk='gitk --all >/dev/null &'
 alias gx='gitx --all'
 
 
+alias gvim='gvim --servername `basename $(pwd)`'
