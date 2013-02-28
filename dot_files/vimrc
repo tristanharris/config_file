@@ -16,4 +16,6 @@ set list listchars=tab:»·,trail:· " show tabs and trailing whitespace
 set scrolloff=3 " Keep the cursor 3 lines away from the edge
 set ruler " Show cursor position in status bar
 set showmatch " Highlight matching brackets
+set statusline=%<\ %n:%f\ %m%r%y%{&ff=='unix'?'':'\['.&ff.']'}%*%=%{SyntasticStatuslineFlag()}\ %-14.(%l,%c%V\ (%P)%)
+set laststatus=2 " Show 2 lines of status
 
