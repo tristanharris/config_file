@@ -30,3 +30,6 @@
 [submodule "dot_files/vim/bundle/taglist"]
 	path = dot_files/vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "dot_files/vim/bundle/syntastic"]
+	path = dot_files/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
