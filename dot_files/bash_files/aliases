@@ -18,7 +18,11 @@ alias ql='qlmanage -p  > /dev/null 2>&1 '
 alias gk='gitk --all >/dev/null &'
 alias gx='gitx --all'
 
-
 alias gvim='gvim --servername `basename $(pwd)`'
 
 alias draw2svg='migrate -I draw -O svg'
+
+alias vpndown='nmcli con down id '
+alias vpnlist='nmcli -f name,type con list | grep -i "name\|vpn"'
+alias vpnstatus='nmcli -f name,devices,default,vpn con status'
+alias vpnup='nmcli con up id '
