@@ -4,7 +4,6 @@ if [ -f /etc/bashrc ]; then
 fi
 
 source ~/.bash_files/paths
-
 source ~/.bash_files/aliases
 
 test -s ~/.alias && . ~/.alias || true
@@ -28,4 +27,4 @@ export PS1="${TITLEBAR}[\u@\h \W]\$ "
 prompt
 unset prompt
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
