@@ -1,4 +1,4 @@
 set guioptions-=T " Turn off gui toolbar
 au GUIEnter * set lines=35 columns=128 " Set window size for gui
-au GUIEnter * :NERDTree " Automatically show nerdtree on gui start
+"au GUIEnter * :NERDTree " Automatically show nerdtree on gui start
 

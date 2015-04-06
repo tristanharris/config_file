@@ -11,11 +11,34 @@ set hidden " keep files open when switching buffers
 set autoindent " Auto indenting
 set expandtab " Convert tabs to spaces
 set shiftwidth=2 " Number of sapce to auto indent
+set tabstop=2 " Number of gaps to use for tab
 set smarttab
 set list listchars=tab:»·,trail:· " show tabs and trailing whitespace
+"set list listchars=tab:\ \ ,trail:· "show leading/trailing spaces
 set scrolloff=3 " Keep the cursor 3 lines away from the edge
 set ruler " Show cursor position in status bar
 set showmatch " Highlight matching brackets
 set statusline=%<\ %n:%f\ %m%r%y%{&ff=='unix'?'':'\['.&ff.']'}%*%=%{SyntasticStatuslineFlag()}\ %-14.(%l,%c%V\ (%P)%)
 set laststatus=2 " Show 2 lines of status
 
+"highlight ltspaces guifg=black guibg=red
+"au FileType php match LTSpaces /\(^\t*[\t ]\+ \)\|\([\t ]\+$\)/
+let g:syntastic_php_phpcs_args="--standard=PSR2"
+"au FileType php set tabstop=4
+"au FileType php set shiftwidth=4
+
+" Use Node.js for JavaScript interpretation
+let $JS_CMD='node'
+
+colorscheme elflord
+
+" Check highlight groups
+" http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
+nmap <Leader>sI :call <SID>SynStack()<CR>
+
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
