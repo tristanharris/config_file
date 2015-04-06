@@ -1,4 +1,4 @@
 set wildmode=list:full
 set complete=ls
 set titlestring=Firefox
-
+set defsearch=ddg

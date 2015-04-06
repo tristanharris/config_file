@@ -4,4 +4,5 @@ $if term=xterm
 "\e[5;5~": history-search-backward
 "\e[6;5~": history-search-forward
 $endif
+set match-hidden-files off
 

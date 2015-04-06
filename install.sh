@@ -9,6 +9,6 @@ for name in *; do
     fi
   else
     echo "Creating $target"
-    ln -s "$PWD/$name" "$target"
+    ln -sT "$PWD/$name" "$target"
   fi
 done
