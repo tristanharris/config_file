@@ -20,3 +20,5 @@ alias gx='gitx --all'
 
 
 alias gvim='gvim --servername `basename $(pwd)`'
+
+alias draw2svg='migrate -I draw -O svg'

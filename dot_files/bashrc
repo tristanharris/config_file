@@ -4,4 +4,9 @@ source ~/.bash_files/paths
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 source ~/.bash_files/aliases
+test -s ~/.alias && . ~/.alias || true
+[[ -f "/home/tris/.config/autopackage/paths-bash" ]] && . "/home/tris/.config/autopackage/paths-bash"
 
+export PAGER='less -R'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

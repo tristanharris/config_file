@@ -30,3 +30,5 @@
 	whitespace = warn
 [diff]
 	renames = true
+[http]
+	postBuffer = 524288000
