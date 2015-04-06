@@ -1,36 +1,35 @@
-  require 'rubygems'
-  require 'looksee'
+require 'irb/completion'
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
-  HISTFILE = "~/.irb.hist"
-  MAXHISTSIZE = 100
-   
-  begin
-    if defined? Readline::HISTORY
-      histfile = File::expand_path( HISTFILE )
-      if File::exists?( histfile )
-        lines = IO::readlines( histfile ).collect {|line| line.chomp}
-        puts "Read %d saved history commands from %s." %
-          [ lines.nitems, histfile ] if $DEBUG || $VERBOSE
-        Readline::HISTORY.push( *lines )
-      else
-        puts "History file '%s' was empty or non-existant." %
-          histfile if $DEBUG || $VERBOSE
-      end
-  
-      Kernel::at_exit {
-        lines = Readline::HISTORY.to_a.reverse.uniq.reverse
-        lines = lines[ -MAXHISTSIZE, MAXHISTSIZE ] if lines.length > MAXHISTSIZE
-        $stderr.puts "Saving %d history lines to %s." %
+module Readline
+  module History
+    LOG = "#{ENV['HOME']}/.irb-history"
 
-          [ lines.length, histfile ] if $VERBOSE || $DEBUG
-        File::open( histfile, File::WRONLY|File::CREAT|File::TRUNC ) {|ofh|
-          lines.each {|line| ofh.puts line }
-        }
-      }
+    def self.write_log(line)
+      File.open(LOG, 'ab') {|f| f << "#{line}\n"}
+    end
+
+    def self.start_session_log
+      write_log("\n# session start: #{Time.now}\n\n")
+      at_exit { write_log("\n# session stop: #{Time.now}\n") }
     end
   end
 
-def hist
-  puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
+  alias :old_readline :readline
+  def readline(*args)
+    ln = old_readline(*args)
+    begin
+      History.write_log(ln)
+    rescue
+    end
+    ln
+  end
 end
 
+Readline::History.start_session_log
+
+require 'irb/ext/save-history'
+IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
+
+IRB.conf[:PROMPT_MODE] = :SIMPLE
