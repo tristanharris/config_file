@@ -1,6 +1,8 @@
 --type-add
-ruby=.feature,.haml
---type-set
-sass=.sass
+ruby=feature,haml,ru
 --type-add
-php=.inc
+ruby:is:Gemfile
+--type-set
+sass=sass,scss
+--type-add
+php=inc
