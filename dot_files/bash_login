@@ -9,5 +9,3 @@ export EDITOR=vi
 
 export VIM_APP_DIR=/Applications/Mine
 
-. /usr/local/etc/bash_completion
-
