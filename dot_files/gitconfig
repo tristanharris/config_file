@@ -4,7 +4,9 @@
 
 [core]
 	excludesfile = ~/.git_global_ignore
+	autocrlf = input
 	pager = less -x2
+	whitespace = trailing-space,space-before-tab
 
 [alias]
 	st = status
@@ -29,6 +31,15 @@
 [apply]
 	whitespace = warn
 [diff]
-	renames = true
+	renames = copies
+	guitool = meld
+	tool = meld
+	mnemonicprefix = true
+
+[instaweb]
+	local = true
+	httpd = webrick
 [http]
 	postBuffer = 524288000
+[push]
+	default = simple
