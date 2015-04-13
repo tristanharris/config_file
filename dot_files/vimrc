@@ -1,3 +1,5 @@
+let $GEM_HOME='' " unset GEM env variables - causes problems when
+let $GEM_PATH='' "    using RVM and vim with dynamic Ruby loading
 filetype on
 filetype off
 call pathogen#runtime_append_all_bundles()
