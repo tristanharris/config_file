@@ -1,5 +1,6 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/php/bin:$PATH"
 export PATH="/Users/tris/Library/Bin:$PATH"
+export PATH="~/bin:$PATH"
 export EC2_HOME=~/.ec2-api-tools
 export PATH=$PATH:$EC2_HOME/bin
