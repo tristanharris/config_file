@@ -2,7 +2,6 @@
 ruby=feature,haml,ru
 --type-add
 ruby:is:Gemfile
---type-set
-sass=sass,scss
 --type-add
 php=inc
+--ignore-file=is:tags
