@@ -1,7 +1,9 @@
 .*.sw?
+.sw?
 *~
 CVS/*
 .gitk-tmp*
 /tags
 /doc/tags
 .DS_Store
+.~*#
