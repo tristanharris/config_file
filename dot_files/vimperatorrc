@@ -1,4 +1,5 @@
 set wildmode=list:full
 set complete=ls
 set titlestring=Firefox
-set defsearch=ddg
+"set defsearch=ddg
+set gui=addons,nobookmarks,nomenu,nonavigation,tabs
